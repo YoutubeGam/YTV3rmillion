@@ -2,15 +2,13 @@
 -- Reasons for having so much 'if' is to avoid mistakes
 local ui=game:GetService("CoreGui"):FindFirstChild'Discord';if ui then ui:Destroy();end;
 local plr=game:GetService'Players'.LocalPlayer
-local result
 do--Main
-    DiscordLib=loadstring(game:HttpGet"https://raw.githubusercontent.com/YoutubeGam/YTV3rmillion/main/scripts/firesignal%20GUI.lua")()
+    DiscordLib=loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/discord%20lib.txt")()
     local win=DiscordLib:Window("YTDevs - discord.gg/Cvxa4FZVUC")
     local serv=win:Server("YTHub", "http://www.roblox.com/asset/?id=247421733")
     Page_2=serv:Channel("Main")
     Page_1=serv:Channel("Settings")
 end;
-
 do--function
     function functionfire(what,obj)
         if obj==nil then
