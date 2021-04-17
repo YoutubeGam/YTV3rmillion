@@ -4,7 +4,7 @@ local ui=game:GetService("CoreGui"):FindFirstChild'Discord';if ui then ui:Destro
 local plr=game:GetService'Players'.LocalPlayer
 local result
 do--Main
-    DiscordLib=loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/discord%20lib.txt")()
+    DiscordLib=loadstring(game:HttpGet"https://raw.githubusercontent.com/YoutubeGam/YTV3rmillion/main/scripts/firesignal%20GUI.lua")()
     local win=DiscordLib:Window("YTDevs - discord.gg/Cvxa4FZVUC")
     local serv=win:Server("YTHub", "http://www.roblox.com/asset/?id=247421733")
     Page_2=serv:Channel("Main")
@@ -30,7 +30,9 @@ do--function
             end
         elseif what=='FireSignal' then
             if firesignal==nil then return idiot('Eh... your exploit doesn\'t have this function');end;
-            firesignal(obj)
+            for i,_ in next,{'MouseButton1Click','MouseButton1Up','MouseButton1Down','Activated'}do
+                firesignal(obj[_])
+            end
         end;
     end
     function idiot(txt)
